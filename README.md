@@ -1,31 +1,91 @@
-# Create React App
+# Happy Birthday Card
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+A Customizable Web based birthday card to wish your friends and family in a unique way.
 
-## Deploy Your Own
+Check out the Previews -
 
-Deploy your own Create React App project with Vercel.
+- [Without Scroll Message](https://happy-birthday-card.vercel.app/)
+- [With Scroll Message](https://hbd-card.netlify.app/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
+If you liked it, please consider giving it star a 馃ぉ猸�.
 
-_Live Example: https://create-react-template.vercel.app/_
+---
 
-## Available Scripts
+## How to setup
 
-In the project directory, you can run:
+Here are the methods to set it up for yourself.
 
-### `npm start`
+### Remote Deployment
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Vercel Deploy
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+  [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAnshumanMahato%2FHappy-Birthday-Card&env=NAME,PIC&envDescription=NAME%20-%3E%20Name%20of%20the%20Receiver%20%7C%20PIC%20-%3E%20web%20url%20of%20a%20picture%20of%20the%20receiver&envLink=https%3A%2F%2Fgithub.com%2FAnshumanMahato%2FHappy-Birthday-Card%2Fblob%2Fmain%2Fdocs%2Fvariables.md&project-name=happy-birthday-card&repo-name=happy-birthday-card&demo-title=Happy%20Birthday%20Card&demo-description=This%20is%20a%20web%20based%20interactive%20birthday%20card.&demo-url=https%3A%2F%2Fhappy-birthday-card.vercel.app%2F&demo-image=https%3A%2F%2Ftelegra.ph%2Ffile%2Fac886529ccc3843552f81.png)
 
-### `npm test`
+- Netlify Deploy
 
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  [![Deploy with NEtlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/AnshumanMahato/Happy-Birthday-Card)
 
-### `npm run build`
+Remote deployment will require you to specify some mandatory Evironment Variables,
 
-Builds the app for production to the `build` folder.
+- NAME: Name of the receiver.
 
-It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+- PIC: Url of the pic to be loaded in the card. If don't have the image hosted somewhere, you may publish a [telegra.ph article](https://telegra.ph) with your image and copy the image address from there.
+
+To know more about the environment variables, check [References](#references).
+
+### For Local Building
+
+1. Clone the repository
+
+   ```sh
+   git clone https://github.com/AnshumanMahato/Happy-Birthday-Card
+   ```
+
+2. Install dependencies
+
+   ```sh
+   npm install
+   ```
+
+3. Add a pic of the receiver, in the `./local` directory. Ensure that the image is of 1:1 ratio or it might get cropped and squished.
+
+4. Create a `.env` file in root directory, and add the following lines.
+
+   ```env
+    NAME='Name of the Receiever'
+    PIC='name-of-image.extension'
+   ```
+
+5. Execute the following commands in order.
+
+   ```sh
+    npm run init-index-local
+    npm run build:parcel
+   ```
+
+6. Upon Successful execution, your built files will be ready in the `./dist` directory. Open `./dist/index.html` to see the card.
+
+For further customization, checkout [here](./docs/customizations.md).
+
+---
+
+## References
+
+- [Environment Variables](./docs/variables.md)
+
+- [Attributions](./docs/attributions.md)
+
+---
+
+## Support
+
+If you have any queries or need some help in deployment, you may contact me here
+
+<div align="center">
+
+<a href="https://t.me/AnshumanMahato"><img src="https://cdn.cdnlogo.com/logos/t/39/telegram.svg" height="50px"></a>
+<a href="mailto:rcoder.bytes@gmail.com"><img src="https://cdn.cdnlogo.com/logos/g/93/gmail.svg" height="50px"></a>
+
+Made with 馃挅 by Gaurav Sharma 
+
+</div>
